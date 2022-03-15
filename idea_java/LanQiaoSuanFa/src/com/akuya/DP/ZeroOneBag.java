@@ -63,7 +63,21 @@ public class ZeroOneBag {
                 }
             }
         }
+//查询选取的货物
+        int temp=bag[number][capacity];
+        for(int i=1,j=capacity;i<=number;i++){
+            if(bag[i][j]==temp){
+                System.out.print(i+" ");
+                temp=temp-p[i];
+                j=j-w[i];
+                i=0;
+            }
+            if(temp==0){
+                break;
+            }
+        }
 
+        System.out.println();
 
         return bag[number][capacity];
 
